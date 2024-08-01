@@ -47,6 +47,8 @@ import { UnifiedThemeProvider } from '@backstage/theme';
 import LightIcon from '@material-ui/icons/WbSunny';
 import { ltimTheme } from './ltim-theme/ltimTheme';
 
+import { githubAuthApiRef } from '@backstage/core-plugin-api';
+
 const app = createApp({
   apis,
   bindRoutes({ bind }) {
@@ -82,7 +84,19 @@ const app = createApp({
    * monkmantra - added the themes section - END
    */
   components: {
-    SignInPage: props => <SignInPage {...props} auto providers={['guest']} />,
+    // SignInPage: props => <SignInPage {...props} auto providers={['guest']} />,
+    SignInPage: props => (
+      <SignInPage
+        {...props}
+        auto
+        provider={{
+          id: 'github-auth-provider',
+          title: 'GitHub',
+          message: 'Sign in using GitHub',
+          apiRef: githubAuthApiRef,
+        }}
+      />
+    ),
   },
 });
 
