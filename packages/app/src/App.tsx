@@ -40,6 +40,13 @@ import { CatalogGraphPage } from '@backstage/plugin-catalog-graph';
 import { RequirePermission } from '@backstage/plugin-permission-react';
 import { catalogEntityCreatePermission } from '@backstage/plugin-catalog-common/alpha';
 
+/**
+ * JV - added the below 3 lines for theming
+ */
+import { UnifiedThemeProvider } from '@backstage/theme';
+import LightIcon from '@material-ui/icons/WbSunny';
+import { ltimTheme } from './ltim-theme/ltimTheme';
+
 const app = createApp({
   apis,
   bindRoutes({ bind }) {
@@ -59,6 +66,21 @@ const app = createApp({
       catalogIndex: catalogPlugin.routes.catalogIndex,
     });
   },
+  /**
+   * monkmantra - added the themes section - BEGIN
+   */
+  themes: [{
+    id: 'ltim-theme',
+    title: 'LTIMindtree',
+    variant: 'dark',
+    icon: <LightIcon />,
+    Provider: ({ children }) => (
+      <UnifiedThemeProvider theme={ltimTheme} children={children} />
+    ),
+  }],
+  /**
+   * monkmantra - added the themes section - END
+   */
   components: {
     SignInPage: props => <SignInPage {...props} auto providers={['guest']} />,
   },

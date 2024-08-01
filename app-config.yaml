@@ -1,9 +1,9 @@
 app:
-  title: Scaffolded Backstage App
+  title: LTIMindtree IDP
   baseUrl: http://localhost:3000
 
 organization:
-  name: Humanitec
+  name: LTIMindtree
 
 backend:
   baseUrl: http://localhost:7007
@@ -42,16 +42,24 @@ scaffolder:
 
 catalog:
   rules:
-    - allow: [Component, System, API, Resource, Location]
+    - allow: [Component, System, API, Resource, Location, Template]
   locations:
     - type: file
       target: ../../catalog-info.yaml
+    # - type: file
+    #   target: ../../templates/node-service/template.yaml
+    #   rules:
+    #     - allow: [Template]
+    # - type: file
+    #   target: ../../templates/podinfo-example/template.yaml
+    #   rules:
+    #     - allow: [Template]
     - type: file
-      target: ../../templates/node-service/template.yaml
+      target: ../../examples/python-fastapi-service-gcr-cloudsql/template.yaml
       rules:
         - allow: [Template]
     - type: file
-      target: ../../templates/podinfo-example/template.yaml
+      target: ../../examples/nextjs-website-azureappservice/template.yaml
       rules:
         - allow: [Template]
     - type: file
