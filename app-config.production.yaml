@@ -18,7 +18,7 @@ backend:
 #     guest:
 #       dangerouslyAllowOutsideDevelopment: true
 auth:
-  environment: production
+  # environment: production
   providers:
     github:
       development:
@@ -31,6 +31,8 @@ auth:
             # Matches the GitHub username with the Backstage user entity name.
             # See https://backstage.io/docs/auth/github/provider#resolvers for more resolvers.
             - resolver: usernameMatchingUserEntityName
+    guest:
+      dangerouslyAllowOutsideDevelopment: true
 
 catalog:
   rules:
