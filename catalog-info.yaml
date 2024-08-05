@@ -6,6 +6,7 @@ metadata:
   annotations:
     "humanitec.com/orgId": "monkmantra"
     "humanitec.com/appId": "backstage"
+    github.com/project-slug: monkmantra/backstage
 spec:
   type: website
   owner: user:guest
