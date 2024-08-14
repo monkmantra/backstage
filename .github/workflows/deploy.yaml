@@ -118,6 +118,8 @@ jobs:
           sed -i 's/#AUTH_GITHUB_CLIENT_SECRET#/${{ secrets.AUTH_GITHUB_CLIENT_SECRET }}/g' app-config.yaml
           sed -i 's/#AUTH_GITHUB_CLIENT_ID#/${{ secrets.AUTH_GITHUB_CLIENT_ID }}/g' app-config.production.yaml
           sed -i 's/#AUTH_GITHUB_CLIENT_SECRET#/${{ secrets.AUTH_GITHUB_CLIENT_SECRET }}/g' app-config.production.yaml
+          sed -i 's/#SONARCLOUD_TOKEN#/${{ secrets.SONAR_TOKEN }}/g' app-config.yaml
+          sed -i 's/#SONARCLOUD_TOKEN#/${{ secrets.SONAR_TOKEN }}/g' app-config.production.yaml
 
       - run: mkdir credentials && touch credentials/github-app-backstage-humanitec-credentials.yaml
       - run: docker image build -t backstage .
