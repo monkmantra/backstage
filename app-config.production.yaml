@@ -40,6 +40,9 @@ proxy:
     allowedMethods: ['GET']
     auth: "#SONARCLOUD_TOKEN#"
 
+sonarQube:
+  baseUrl: https://sonarqube-so2knvar.mindtree.opsera.io
+
 catalog:
   rules:
     - allow: [Component, System, API, Resource, Location, Template]
