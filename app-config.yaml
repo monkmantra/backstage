@@ -28,9 +28,10 @@ integrations:
 proxy:
 
 sonarqube:
-  name: ltimindtreeSonarqube
-  baseUrl: https://sonarqube-so2knvar.mindtree.opsera.io
-  apiKey: #SONARCLOUD_TOKEN#
+  instances:
+  - name: ltimindtreeSonarqube
+    baseUrl: https://sonarqube-so2knvar.mindtree.opsera.io
+    apiKey: #SONARCLOUD_TOKEN#
 
 techdocs:
   builder: 'local'

@@ -41,9 +41,10 @@ auth:
 #     auth: "#SONARCLOUD_TOKEN#"
   
 sonarqube:
-  name: ltimindtreeSonarqube
-  baseUrl: https://sonarqube-so2knvar.mindtree.opsera.io
-  apiKey: #SONARCLOUD_TOKEN#
+  instances:
+  - name: ltimindtreeSonarqube
+    baseUrl: https://sonarqube-so2knvar.mindtree.opsera.io
+    apiKey: #SONARCLOUD_TOKEN#
 
 catalog:
   rules:
