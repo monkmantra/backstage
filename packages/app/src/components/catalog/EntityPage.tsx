@@ -61,15 +61,6 @@ import { ReportIssue } from '@backstage/plugin-techdocs-module-addons-contrib';
 
 // monkmantra - add SonarQube plugin
 import { EntitySonarQubeCard } from '@backstage/plugin-sonarqube';
-// import { SonarQubeCard } from '@backstage/plugin-sonarqube';
-
-const OverviewContent = ({ entity }: { entity: Entity }) => (
-  <Grid container spacing={3} alignItems="stretch">
-    <Grid item md={6}>
-      <EntitySonarQubeCard variant="gridItem" />
-    </Grid>
-  </Grid>
-);
 
 const techdocsContent = (
   <EntityTechdocsContent>
@@ -152,6 +143,9 @@ const overviewContent = (
     </Grid>
     <Grid item md={8} xs={12}>
       <EntityHasSubcomponentsCard variant="gridItem" />
+    </Grid>
+    <Grid item md={6}>
+      <EntitySonarQubeCard variant="gridItem" />
     </Grid>
   </Grid>
 );
