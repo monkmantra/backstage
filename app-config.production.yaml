@@ -34,14 +34,15 @@ auth:
     guest:
       dangerouslyAllowOutsideDevelopment: true
 
-proxy:
-  '/sonarqube':
-    target: https://sonarqube-so2knvar.mindtree.opsera.io/api
-    allowedMethods: ['GET']
-    auth: "#SONARCLOUD_TOKEN#"
+# proxy:
+#   '/sonarqube':
+#     target: https://sonarqube-so2knvar.mindtree.opsera.io/api
+#     allowedMethods: ['GET']
+#     auth: "#SONARCLOUD_TOKEN#"
   
-sonarQube:
+sonarqube:
   baseUrl: https://sonarqube-so2knvar.mindtree.opsera.io
+  apiKey: #SONARCLOUD_TOKEN#
 
 catalog:
   rules:
