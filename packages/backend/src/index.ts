@@ -47,8 +47,5 @@ backend.add(import('@backstage/plugin-scaffolder-backend-module-github'));
 backend.add(import('@humanitec/backstage-plugin-backend'));
 backend.add(import('@humanitec/backstage-plugin-scaffolder-backend-module'));
 
-//monkmantra - sonarqube
-backend.add(import('@backstage/plugin-sonarqube'));
-
 
 backend.start();

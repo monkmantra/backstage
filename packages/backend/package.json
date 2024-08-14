@@ -45,8 +45,8 @@
     "better-sqlite3": "^9.0.0",
     "node-gyp": "^10.0.0",
     "pg": "^8.11.3",
-    "winston": "^3.2.1",
-    "@backstage/plugin-sonarqube": "^0.7.16"
+    "winston": "^3.2.1"
+    // "@backstage/plugin-sonarqube": "^0.7.16"
   },
   "devDependencies": {
     "@backstage/cli": "^0.26.10",
