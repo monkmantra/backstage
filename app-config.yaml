@@ -26,6 +26,10 @@ integrations:
         - $include: credentials/github-app-backstage-humanitec-credentials.yaml
 
 proxy:
+  '/sonarqube':
+    target: https://sonarqube-so2knvar.mindtree.opsera.io/api
+    allowedMethods: ['GET']
+    auth: "#SONARCLOUD_TOKEN#"
 
 techdocs:
   builder: 'local'
